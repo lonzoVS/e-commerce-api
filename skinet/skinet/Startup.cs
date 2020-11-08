@@ -5,6 +5,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Infrastructure.Data;
+using Core.Interfaces;
 
 namespace skinet
 {
@@ -25,6 +26,7 @@ namespace skinet
             services.AddControllers();
             services.AddDbContext<StoreContext>(x => 
                 x.UseSqlite(_configuration.GetConnectionString("DefaultConnection")));
+            services.AddScoped<IProduceRepository, ProductRepository>();
             
         }
 
