@@ -29,8 +29,6 @@ namespace skinet
             services.AddAutoMapper(typeof(MappingProfiles));
             services.AddApplicationServices();
             services.AddSwaggerDocumentation();
-
-            
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
